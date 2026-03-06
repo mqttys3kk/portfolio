@@ -1,0 +1,505 @@
+/* ZÁKLAD */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #050505;
+    color: #e5e5e5;
+    overflow-x: hidden;
+}
+
+/* NAVIGACE */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 60px;
+}
+
+nav .logo {
+    color: #4da6ff;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #4da6ff;
+}
+
+/* HERO SEKCE */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NEON POZADÍ */
+.color-bg {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, #4da6ff, #003d66, #001a33);
+    filter: blur(180px);
+    opacity: 0.7;
+    z-index: 1;
+}
+
+/* KARTA */
+.card {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    background: rgba(15, 15, 15, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 50px rgba(77, 166, 255, 0.3);
+}
+
+/* LEVÁ STRANA */
+.left {
+    width: 50%;
+}
+
+.left h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.left h1 span {
+    color: #4da6ff;
+}
+
+.left h3 {
+    color: #1e90ff;
+    margin-top: -5px;
+}
+
+.left p {
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 420px;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #1e90ff;
+    color: white;
+}
+
+.primary:hover {
+    box-shadow: 0 0 15px #1e90ff;
+}
+
+.secondary {
+    border: 2px solid #1e90ff;
+    color: #1e90ff;
+}
+
+.secondary:hover {
+    box-shadow: 0 0 15px #1e90ff;
+}
+
+/* FOTO */
+.right .photo-frame {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #1e90ff;
+    box-shadow: 0 0 40px #1e90ff;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ANIMACE */
+.fade-in {
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+.slide-in-left {
+    animation: slideLeft 1.2s ease forwards;
+    opacity: 0;
+}
+
+.slide-in-right {
+    animation: slideRight 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(-60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* ABOUT STRÁNKA */
+.about-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.about-card {
+    position: relative;
+    z-index: 2;
+    width: 60%;
+    background: rgba(15, 15, 15, 0.85);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(77, 166, 255, 0.3);
+    animation: fadeIn 1.2s ease forwards;
+    opacity: 0;
+}
+
+.about-card h1 {
+    color: #4da6ff;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.about-card p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #e5e5e5;
+    font-size: 18px;
+}
+
+/* ZÁJMY STRÁNKA */
+.interests-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px;
+    text-align: center;
+}
+
+.interests-section h1 {
+    color: #4da6ff;
+    font-size: 42px;
+    margin-bottom: 40px;
+}
+
+.interests-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.interest-card {
+    width: 300px;
+    background: rgba(15, 15, 15, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(77, 166, 255, 0.25);
+    transition: 0.3s;
+}
+
+.interest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(77, 166, 255, 0.5);
+}
+
+.interest-card h2 {
+    color: #4da6ff;
+    margin-bottom: 15px;
+}
+
+.interest-card p {
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+.center-btn {
+    margin-top: 40px;
+}
+
+/* PORTFOLIO STRÁNKA */
+.portfolio-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px;
+    text-align: center;
+}
+
+.portfolio-section h1 {
+    color: #4da6ff;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.portfolio-desc {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 18px;
+    color: #e5e5e5;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.portfolio-card {
+    width: 300px;
+    background: rgba(15, 15, 15, 0.85);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(77, 166, 255, 0.25);
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(77, 166, 255, 0.5);
+}
+
+.portfolio-card h2 {
+    color: #4da6ff;
+    margin-bottom: 15px;
+}
+
+.portfolio-card p {
+    color: #e5e5e5;
+    line-height: 1.6;
+}
+
+/* KONTAKT STRÁNKA */
+.contact-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    background: rgba(15, 15, 15, 0.85);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(77, 166, 255, 0.3);
+}
+
+.contact-card h1 {
+    color: #4da6ff;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.contact-text {
+    color: #e5e5e5;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    color: #4da6ff;
+    font-size: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #1e90ff;
+    background: #0d0d0d;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    box-shadow: 0 0 15px #1e90ff;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.back-btn {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #1e90ff;
+}
+
+.card:hover,
+.about-card:hover,
+.interest-card:hover,
+.portfolio-card:hover,
+.contact-card:hover {
+    box-shadow: 0 0 50px rgba(77, 166, 255, 0.6);
+    transform: translateY(-8px);
+}
+
+.color-bg {
+    animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.1); }
+    100% { opacity: 0.6; transform: scale(1); }
+}
+
+body {
+    animation: fadePage 1.2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadePage {
+    to { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+
+    .card {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        padding: 40px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .photo-frame {
+        margin: 20px auto;
+    }
+
+    nav {
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .interests-container,
+    .portfolio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 90%;
+    }
+
+    .about-card {
+        width: 90%;
+    }
+}
+
+.fade-in,
+.slide-in-left,
+.slide-in-right {
+    animation-duration: 0.9s;
+}
+
+/* DĚKUJI STRÁNKA */
+.thankyou-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    text-align: center;
+}
+
+.thankyou-card {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    background: rgba(15, 15, 15, 0.85);
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(77, 166, 255, 0.3);
+}
+
+.thankyou-card h1 {
+    color: #4da6ff;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.thankyou-card p {
+    color: #e5e5e5;
+    font-size: 20px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt – Matěj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2 class="logo">Matěj</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">O mně</a></li>
+            <li><a href="interests.html">Zájmy</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a class="active" href="contact.html">Kontakt</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contact-section">
+
+    <div class="color-bg"></div>
+
+    <div class="contact-card fade-in">
+
+        <h1>Kontakt</h1>
+
+        <p class="contact-text">
+            Pokud mě chcete kontaktovat, můžete mi napsat zprávu přes tento formulář.
+        </p>
+
+        <form class="contact-form" action="https://formsubmit.co/matyfoltrix@gmail.com" method="POST">
+
+            <!-- Nastavení FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="thankyou.html">
+
+            <label>Jméno</label>
+            <input type="text" name="name" placeholder="Vaše jméno" required>
+
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Váš email" required>
+
+            <label>Zpráva</label>
+            <textarea name="message" placeholder="Vaše zpráva" required></textarea>
+
+            <button type="submit" class="btn primary">Odeslat</button>
+
+        </form>
+
+        <a href="index.html" class="btn secondary back-btn">Zpět na hlavní stránku</a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
